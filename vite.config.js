@@ -9,4 +9,10 @@ export default defineConfig({
       // "swiper/react": "swiper/react/swiper-react.js",
     },
   },
+  build: {
+    outDir: "dist", // Default output directory
+    rollupOptions: {
+      // Customize Rollup options if necessary
+    },
+  },
 });
