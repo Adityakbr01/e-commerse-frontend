@@ -13,7 +13,7 @@ function Hero_Banner() {
 
   return (
     <div>
-      <h1 className="mt-4 font-semibold text-black text-[1em] md:text-[1.4em]">
+      <h1 className="mt-4 font-semibold text-black text-[1.3em] md:text-[1.6em]">
         🛍️ Shop Now, Why You Waiting? 🛒
       </h1>
 
