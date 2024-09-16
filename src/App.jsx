@@ -34,11 +34,14 @@ function App() {
 
   useEffect(() => {
     const hasVisited = localStorage.getItem("hasVisited");
+    const visitExpiry = localStorage.getItem("visitExpiry");
+    const now = new Date().getTime();
 
-    if (!hasVisited) {
+    if (!hasVisited || now > visitExpiry) {
       const timer = setTimeout(() => {
         setLoading(false);
         localStorage.setItem("hasVisited", "true");
+        localStorage.setItem("visitExpiry", now + 24 * 60 * 60 * 1000); // 24 hours expiry
       }, 3000);
 
       return () => clearTimeout(timer);
