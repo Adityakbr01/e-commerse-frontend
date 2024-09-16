@@ -12,7 +12,7 @@ function Home() {
         <Hero_Banner />
 
         <div className="pb-10 border-b border-gray-300 mb-11">
-          <h1 className="mt-8 mb-4 text-[1.4em] md:text-[1.7em] font-bold">
+          <h1 className="mt-8 mb-4 text-[1em] md:text-[1.7em] font-bold">
             🛍️ Top-notch Quality Guaranteed! 🏆
           </h1>
           <ProductCard scroll={"scroll"} />
