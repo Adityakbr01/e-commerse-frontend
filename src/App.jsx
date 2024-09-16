@@ -33,11 +33,18 @@ function App() {
   }, []);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 3000);
+    const hasVisited = localStorage.getItem("hasVisited");
 
-    return () => clearTimeout(timer);
+    if (!hasVisited) {
+      const timer = setTimeout(() => {
+        setLoading(false);
+        localStorage.setItem("hasVisited", "true");
+      }, 3000);
+
+      return () => clearTimeout(timer);
+    } else {
+      setLoading(false);
+    }
   }, []);
 
   return (
