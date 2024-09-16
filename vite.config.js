@@ -12,7 +12,7 @@ export default defineConfig({
   build: {
     outDir: "dist", // Default output directory
     rollupOptions: {
-      external: ["react-toastify"],
+      // external: ["react-toastify"],
     },
   },
 });
