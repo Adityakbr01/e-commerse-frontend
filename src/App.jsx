@@ -3,7 +3,13 @@ import Lenis from "@studio-freight/lenis";
 
 import "./App.css";
 import Navbar from "./components/Navbar";
+import Footer from "./components/section/Footer";
+// import ThemeToggle from "./components/addThemeToggle";
 const Home = lazy(() => import("./components/section/Home"));
+const SupportWith = lazy(() => import("./components/SupportWith"));
+const Fillter_Product_hero = lazy(() =>
+  import("./components/Fillter_Product_hero")
+);
 
 function App() {
   useEffect(() => {
@@ -21,7 +27,7 @@ function App() {
     };
   }, []);
   return (
-    <div className="relative">
+    <div className="relative dark:bg-black">
       <Navbar />
       <Suspense
         fallback={
@@ -34,8 +40,16 @@ function App() {
           </div>
         }
       >
-        <Home />
+        {/* No need in this time if you want to add theme toggle */}
+        {/* <ThemeToggle /> */}
+        {/* If you want to add theme toggle */}
+        <div className="w-[85%] mx-auto">
+          <Home />
+          <SupportWith />
+          <Fillter_Product_hero />
+        </div>
       </Suspense>
+      <Footer />
     </div>
   );
 }

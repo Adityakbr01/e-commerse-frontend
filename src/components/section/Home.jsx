@@ -10,14 +10,14 @@ function Home() {
 
   return (
     <div className="w-full h-full">
-      <div className="w-[85%]  mx-auto">
+      <div className="">
         <Hero_Banner />
 
-        <div className="">
+        <div className="pb-10 border-b border-gray-300 mb-11">
           <h1 className="mt-8 mb-4 text-[0.9em] md:text-[1.4em] font-bold">
             🛍️ Top-notch Quality Guaranteed! 🏆
           </h1>
-          <ProductCard />
+          <ProductCard scroll={"scroll"} />
         </div>
       </div>
       <ToastContainer />
