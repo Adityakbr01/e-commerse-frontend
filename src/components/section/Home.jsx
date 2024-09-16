@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import { Images } from "../../data/banner";
 import Hero_Banner from "../Hero_Banner";
 import ProductCard from "../ProductCard";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 
 function Home() {
   console.log(Images);
@@ -20,7 +18,6 @@ function Home() {
           <ProductCard scroll={"scroll"} />
         </div>
       </div>
-      {/* <ToastContainer /> */}
     </div>
   );
 }
