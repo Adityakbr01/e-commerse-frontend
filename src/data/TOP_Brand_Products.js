@@ -7,7 +7,7 @@ export const TOP_Brand_Products = [
     oldPrice: 1200,
     newPrice: 1000,
     discount: "20%",
-    colorVariants: ["#FEE2E2", "#FF5733", "#33FF57"],
+    colorVariants: ["#FF5733", "#33FF57", "#3357FF"],
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ export const TOP_Brand_Products = [
     oldPrice: 1800,
     newPrice: 1500,
     discount: "16.67%",
-    colorVariants: ["#FEE2E2", "#FF5733", "#33FF57"],
+    colorVariants: ["#FF5733", "#33FF57", "#3357FF"],
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ export const TOP_Brand_Products = [
     oldPrice: 2500,
     newPrice: 2000,
     discount: "20%",
-    colorVariants: ["#FEE2E2", "#FF5733", "#33FF57"],
+    colorVariants: ["#FF5733", "#33FF57", "#3357FF"],
   },
   {
     id: 4,
@@ -37,7 +37,7 @@ export const TOP_Brand_Products = [
     oldPrice: 1000,
     newPrice: 800,
     discount: "20%",
-    colorVariants: ["#FEE2E2", "#FF5733", "#33FF57"],
+    colorVariants: ["#FF5733", "#33FF57", "#3357FF"],
   },
   {
     id: 5,
@@ -47,7 +47,7 @@ export const TOP_Brand_Products = [
     oldPrice: 1400,
     newPrice: 1200,
     discount: "14.29%",
-    colorVariants: ["#FEE2E2", "#FF5733", "#33FF57"],
+    colorVariants: ["#FF5733", "#33FF57", "#3357FF"],
   },
   {
     id: 6,
@@ -57,7 +57,7 @@ export const TOP_Brand_Products = [
     oldPrice: 1300,
     newPrice: 1100,
     discount: "15.38%",
-    colorVariants: ["#FEE2E2", "#FF5733", "#33FF57"],
+    colorVariants: ["#FF5733", "#33FF57", "#3357FF"],
   },
   {
     id: 7,
@@ -67,7 +67,7 @@ export const TOP_Brand_Products = [
     oldPrice: 900,
     newPrice: 700,
     discount: "22.22%",
-    colorVariants: ["#FEE2E2", "#FF5733", "#33FF57"],
+    colorVariants: ["#FF5733", "#33FF57", "#3357FF"],
   },
   {
     id: 8,
@@ -77,7 +77,7 @@ export const TOP_Brand_Products = [
     oldPrice: 1150,
     newPrice: 950,
     discount: "17.39%",
-    colorVariants: ["#FEE2E2", "#FF5733", "#33FF57"],
+    colorVariants: ["#FF5733", "#33FF57", "#3357FF"],
   },
   {
     id: 9,
@@ -87,7 +87,7 @@ export const TOP_Brand_Products = [
     oldPrice: 1600,
     newPrice: 1300,
     discount: "18.75%",
-    colorVariants: ["#FEE2E2", "#FF5733", "#33FF57"],
+    colorVariants: ["#FF5733", "#33FF57", "#3357FF"],
   },
   {
     id: 10,
@@ -97,7 +97,7 @@ export const TOP_Brand_Products = [
     oldPrice: 2600,
     newPrice: 2100,
     discount: "19.23%",
-    colorVariants: ["#FEE2E2", "#FF5733", "#33FF57"],
+    colorVariants: ["#FF5733", "#33FF57", "#3357FF"],
   },
   {
     id: 11,
@@ -107,7 +107,7 @@ export const TOP_Brand_Products = [
     oldPrice: 1800,
     newPrice: 1500,
     discount: "16.67%",
-    colorVariants: ["#FEE2E2", "#FF5733", "#33FF57"],
+    colorVariants: ["#FF5733", "#33FF57", "#3357FF"],
   },
   {
     id: 12,
@@ -117,7 +117,7 @@ export const TOP_Brand_Products = [
     oldPrice: 2100,
     newPrice: 1800,
     discount: "14.29%",
-    colorVariants: ["#FEE2E2", "#FF5733", "#33FF57"],
+    colorVariants: ["#FF5733", "#33FF57", "#3357FF"],
   },
   {
     id: 13,
@@ -127,7 +127,7 @@ export const TOP_Brand_Products = [
     oldPrice: 3000,
     newPrice: 2500,
     discount: "16.67%",
-    colorVariants: ["#FEE2E2", "#FF5733", "#33FF57"],
+    colorVariants: ["#FF5733", "#33FF57", "#3357FF"],
   },
   {
     id: 14,
@@ -137,7 +137,7 @@ export const TOP_Brand_Products = [
     oldPrice: 2000,
     newPrice: 1700,
     discount: "15%",
-    colorVariants: ["#FEE2E2", "#FF5733", "#33FF57"],
+    colorVariants: ["#FF5733", "#33FF57", "#3357FF"],
   },
   {
     id: 15,
@@ -147,7 +147,7 @@ export const TOP_Brand_Products = [
     oldPrice: 3200,
     newPrice: 2700,
     discount: "15.63%",
-    colorVariants: ["#FEE2E2", "#FF5733", "#33FF57"],
+    colorVariants: ["#FF5733", "#33FF57", "#3357FF"],
   },
   {
     id: 16,
@@ -157,7 +157,7 @@ export const TOP_Brand_Products = [
     oldPrice: 950,
     newPrice: 800,
     discount: "15.79%",
-    colorVariants: ["#FEE2E2", "#FF5733", "#33FF57"],
+    colorVariants: ["#FF5733", "#33FF57", "#3357FF"],
   },
   {
     id: 17,
@@ -167,7 +167,7 @@ export const TOP_Brand_Products = [
     oldPrice: 750,
     newPrice: 600,
     discount: "20%",
-    colorVariants: ["#FEE2E2", "#FF5733", "#33FF57"],
+    colorVariants: ["#FF5733", "#33FF57", "#3357FF"],
   },
   {
     id: 18,
@@ -177,7 +177,7 @@ export const TOP_Brand_Products = [
     oldPrice: 3000,
     newPrice: 2400,
     discount: "20%",
-    colorVariants: ["#FEE2E2", "#FF5733", "#33FF57"],
+    colorVariants: ["#FF5733", "#33FF57", "#3357FF"],
   },
   {
     id: 19,
@@ -187,7 +187,7 @@ export const TOP_Brand_Products = [
     oldPrice: 1100,
     newPrice: 900,
     discount: "18.18%",
-    colorVariants: ["#FEE2E2", "#FF5733", "#33FF57"],
+    colorVariants: ["#FF5733", "#33FF57", "#3357FF"],
   },
   {
     id: 20,
@@ -197,7 +197,7 @@ export const TOP_Brand_Products = [
     oldPrice: 1500,
     newPrice: 1200,
     discount: "20%",
-    colorVariants: ["#FEE2E2", "#FF5733", "#33FF57"],
+    colorVariants: ["#FF5733", "#33FF57", "#3357FF"],
   },
   {
     id: 21,
@@ -207,7 +207,7 @@ export const TOP_Brand_Products = [
     oldPrice: 1700,
     newPrice: 1400,
     discount: "17.65%",
-    colorVariants: ["#FEE2E2", "#FF5733", "#33FF57"],
+    colorVariants: ["#FF5733", "#33FF57", "#3357FF"],
   },
   {
     id: 22,
@@ -217,7 +217,7 @@ export const TOP_Brand_Products = [
     oldPrice: 2200,
     newPrice: 1800,
     discount: "18.18%",
-    colorVariants: ["#FEE2E2", "#FF5733", "#33FF57"],
+    colorVariants: ["#FF5733", "#33FF57", "#3357FF"],
   },
   {
     id: 23,
@@ -227,7 +227,7 @@ export const TOP_Brand_Products = [
     oldPrice: 1900,
     newPrice: 1600,
     discount: "15.79%",
-    colorVariants: ["#FEE2E2", "#FF5733", "#33FF57"],
+    colorVariants: ["#FF5733", "#33FF57", "#3357FF"],
   },
   {
     id: 24,
@@ -237,7 +237,7 @@ export const TOP_Brand_Products = [
     oldPrice: 3500,
     newPrice: 3000,
     discount: "14.29%",
-    colorVariants: ["#FEE2E2", "#FF5733", "#33FF57"],
+    colorVariants: ["#FF5733", "#33FF57", "#3357FF"],
   },
   {
     id: 25,
@@ -247,6 +247,6 @@ export const TOP_Brand_Products = [
     oldPrice: 1200,
     newPrice: 1000,
     discount: "16.67%",
-    colorVariants: ["#FEE2E2", "#FF5733", "#33FF57"],
+    colorVariants: ["#FF5733", "#33FF57", "#3357FF"],
   },
 ];

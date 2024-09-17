@@ -94,7 +94,7 @@ function ProductCard({ scroll, noScroll }) {
     >
       {products.map((product) => (
         <SwiperSlide key={product.id}>
-          <div className="overflow-hidden  bg-[#f3f3f3] rounded-lg  overflow-hiddenshadow-md">
+          <div className="overflow-hidden  bg-[#f1f1f1] rounded-lg  overflow-hiddenshadow-md">
             <img
               src={product.image}
               alt="Product"
@@ -113,7 +113,7 @@ function ProductCard({ scroll, noScroll }) {
                 <label htmlFor="color" className="font-semibold text-gray-800">
                   Color
                 </label>
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 px-1 mt-1 py-[0.1rem] border border-[#cbcbcb] rounded-full w-fit">
                   {TOP_Brand_Products[0].colorVariants.map(
                     (color, colorIndex) => (
                       <button

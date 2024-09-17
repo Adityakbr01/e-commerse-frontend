@@ -7,7 +7,11 @@ module.exports = {
   ],
   darkMode: "class", // or 'media' for OS-based dark mode
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        xs: "480px",
+      },
+    },
   },
   plugins: [],
 };

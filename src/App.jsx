@@ -9,6 +9,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import TextAnimation from "./components/Welcome_Loader";
 import Search_ from "./components/Search_";
+import Cart from "./components/Cart";
 // import ThemeToggle from "./components/addThemeToggle";
 const Home = lazy(() => import("./components/section/Home"));
 const SupportWith = lazy(() => import("./components/SupportWith"));
@@ -77,6 +78,7 @@ function App() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/search" element={<Search_ />} />
+                <Route path="/cart" element={<Cart />} />
               </Routes>
             </div>
           </Suspense>
