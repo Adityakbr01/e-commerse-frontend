@@ -2,8 +2,16 @@ import React from "react";
 import { FaCartShopping } from "react-icons/fa6";
 import { RxAvatar } from "react-icons/rx";
 import { HiUserCircle } from "react-icons/hi2";
+import { useSelector } from "react-redux";
+import { cartSlice } from "../Store/features/Cart/Cart_Store";
+import { Link } from "react-router-dom";
 
 function Navbar() {
+  const cartItems = useSelector((state) => state.cart.items);
+  const totalQuantity = useSelector((state) => state.cart.totalQuantity);
+  const totalAmount = useSelector((state) => state.cart.totalAmount);
+  console.log(totalAmount, totalQuantity, cartItems);
+
   return (
     <div className="relative">
       <div className="bg-[#282828] text-white text-[1.1em] py-2 flex justify-between items-center">
@@ -16,10 +24,13 @@ function Navbar() {
           <div className="font-semibold uppercase logo">refire🔥</div>
           <div className="menu">
             <ul className="flex items-center gap-6">
-              <li>Home</li>
-              <li>Search</li>
-              <li className="cart text-[1.4em]">
+              <Link to="/">Home</Link>
+              <Link to="/search">Search</Link>
+              <li className="cart text-[1.4em] cursor-pointer relative">
                 <FaCartShopping />
+                <div className="absolute top-0 -right-[3px] h-[1.7em] w-[1.7em] text-[0.3em] text-white bg-red-500 rounded-full flex items-center justify-center">
+                  <span> {totalQuantity}</span>
+                </div>
               </li>
               <li className="avatar text-[1.58em]">
                 <HiUserCircle />

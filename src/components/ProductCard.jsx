@@ -14,8 +14,18 @@ import { Navigation, Autoplay, Pagination } from "swiper/modules";
 
 SwiperCore.use([Navigation, Pagination]);
 
+///redux toolkit
+import { useDispatch, useSelector } from "react-redux";
+// import { increment, decrement } from "../Store/features/counter/counter";
+import {
+  addItem,
+  removeItem,
+  clearCart,
+} from "../Store/features/Cart/Cart_Store";
+
 function ProductCard({ scroll, noScroll }) {
   const [selectedColors, setSelectedColors] = useState({});
+  const dispatch = useDispatch();
 
   const handleColorClick = (productId, color) => {
     setSelectedColors((prevSelectedColors) => ({
@@ -53,9 +63,14 @@ function ProductCard({ scroll, noScroll }) {
 
   const handleAddToCart = (product) => {
     toast.success(`${product.title.substring(0, 10)} added to cart!`);
+
+    dispatch(addItem(product));
   };
 
   console.log(products);
+
+  const count = useSelector((c) => c.counter.value);
+  // const dispatch = useDispatch();
 
   return (
     <Swiper
@@ -79,7 +94,7 @@ function ProductCard({ scroll, noScroll }) {
     >
       {products.map((product) => (
         <SwiperSlide key={product.id}>
-          <div className="overflow-hidden bg-[#f3f3f3] rounded-lg shadow-md">
+          <div className="overflow-hidden  bg-[#f3f3f3] rounded-lg  overflow-hiddenshadow-md">
             <img
               src={product.image}
               alt="Product"
@@ -120,10 +135,13 @@ function ProductCard({ scroll, noScroll }) {
                 </div>
               </div>
               <button
-                className="flex items-center justify-center p-[0.30rem] px-3 mt-4 text-white rounded-md bg-violet-700"
+                className="flex flex-row items-center justify-center p-[0.30rem] px-3 mt-4 brutalist-card__button brutalist-card__button--mark rounded-full"
                 onClick={() => handleAddToCart(product)}
               >
-                <FaCartShopping className="mr-2" /> Add to Cart
+                <span>
+                  <FaCartShopping className="mr-2" />
+                </span>{" "}
+                <span>Add to Cart</span>
               </button>
             </div>
           </div>

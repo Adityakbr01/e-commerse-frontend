@@ -4,12 +4,15 @@ import { TOP_Brand_Products } from "../data/TOP_Brand_Products";
 import axios from "axios";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useDispatch } from "react-redux";
+import { addItem } from "../Store/features/Cart/Cart_Store";
 
 function Fillter_Product_hero() {
   const [selectedColors, setSelectedColors] = useState({});
   const [products, setProducts] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("All 🛒");
   const [selectedPriceRange, setSelectedPriceRange] = useState("");
+  const dispatch = useDispatch();
 
   useEffect(() => {
     axios
@@ -44,7 +47,47 @@ function Fillter_Product_hero() {
 
   const handleAddToCart = (product) => {
     toast.success(`${product.title.substring(0, 10)} added to cart!`);
+    dispatch(addItem(product));
   };
+
+  const filteredProducts = products
+    .filter((product) => {
+      switch (selectedCategory) {
+        case "All 🛒":
+          return true;
+        case "Electronics 📱":
+          return product.category === "electronics";
+        case "Clothing 👗":
+          return (
+            product.category === "women's clothing" ||
+            product.category === "men's clothing"
+          );
+        case "Home & Kitchen 🏠":
+          return product.category === "home & kitchen";
+        case "Beauty 💄":
+          return product.category === "beauty";
+        case "Sports 🏅":
+          return product.category === "sports";
+        default:
+          return true;
+      }
+    })
+    .filter((product) => {
+      if (!selectedPriceRange) return true;
+      const price = product.price;
+      switch (selectedPriceRange) {
+        case "$0 - $50":
+          return price >= 0 && price <= 50;
+        case "$50 - $100":
+          return price > 50 && price <= 100;
+        case "$100 - $200":
+          return price > 100 && price <= 200;
+        case "$200+":
+          return price > 200;
+        default:
+          return true;
+      }
+    });
 
   return (
     <div>
@@ -90,7 +133,7 @@ function Fillter_Product_hero() {
       <div className="mt-4">
         <h2 className="text-[1.2em] font-bold mb-11 uppercase"></h2>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-          {products.map((product) => (
+          {filteredProducts.map((product) => (
             <div
               key={product.id}
               className="overflow-hidden bg-[#f3f3f3] rounded-lg shadow-md"
@@ -98,7 +141,7 @@ function Fillter_Product_hero() {
               <img
                 src={product.image}
                 alt="Product"
-                className="object-cover w-full max-h-[10rem]"
+                className="object-cover w-full min-h-[10rem] max-h-[10rem]"
               />
               <div className="p-4">
                 <h2 className="text-lg font-semibold">
@@ -142,7 +185,7 @@ function Fillter_Product_hero() {
                   </div>
                 </div>
                 <button
-                  className="flex items-center justify-center p-[0.30rem] px-3 mt-4 text-white rounded-md bg-violet-700 hover:bg-violet-800 transition-colors duration-300"
+                  className="flex items-center justify-center p-[0.30rem] px-3 mt-4 brutalist-card__button brutalist-card__button--mark text-white rounded-full"
                   onClick={() => handleAddToCart(product)}
                 >
                   <FaCartShopping className="mr-2" /> Add to Cart

@@ -3,7 +3,7 @@ import { supportWith } from "../data/supportWith";
 
 function SupportWith() {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-[4vh]">
+    <div className="grid grid-cols-1 border-t pt-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 my-[4vh]">
       {supportWith.map((item) => (
         <div
           key={item.id}

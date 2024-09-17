@@ -1,4 +1,5 @@
 import React, { Suspense, lazy, useEffect, useState } from "react";
+import { Routes, Route } from "react-router-dom";
 import Lenis from "@studio-freight/lenis";
 
 import "./App.css";
@@ -7,6 +8,7 @@ import Footer from "./components/section/Footer";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import TextAnimation from "./components/Welcome_Loader";
+import Search_ from "./components/Search_";
 // import ThemeToggle from "./components/addThemeToggle";
 const Home = lazy(() => import("./components/section/Home"));
 const SupportWith = lazy(() => import("./components/SupportWith"));
@@ -72,9 +74,10 @@ function App() {
             {/* <ThemeToggle /> */}
             {/* If you want to add theme toggle */}
             <div className="w-[85%] mx-auto">
-              <Home />
-              <SupportWith />
-              <Fillter_Product_hero />
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/search" element={<Search_ />} />
+              </Routes>
             </div>
           </Suspense>
           <Footer />
