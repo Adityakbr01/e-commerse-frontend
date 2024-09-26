@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import { FaCartShopping } from "react-icons/fa6";
 import { TOP_Brand_Products } from "../data/TOP_Brand_Products";
 import axios from "axios";
-import { toast } from "react-toastify";
+// import { toast } from "react-toastify";
+import toast from "react-hot-toast";
 import "react-toastify/dist/ReactToastify.css";
 import { useDispatch } from "react-redux";
 import { addItem } from "../Store/features/Cart/Cart_Store";
@@ -46,7 +47,9 @@ function Fillter_Product_hero() {
   };
 
   const handleAddToCart = (product) => {
-    toast.success(`${product.title.substring(0, 10)} added to cart!`);
+    toast.success(`${product.title.substring(0, 10)} added to cart!`, {
+      position: "top-center",
+    });
     dispatch(addItem(product));
   };
 

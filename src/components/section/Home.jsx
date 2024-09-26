@@ -6,10 +6,10 @@ import SupportWith from "../SupportWith";
 import Fillter_Product_hero from "../Fillter_Product_hero";
 
 function Home() {
-  console.log(Images);
+  // console.log(Images);
 
   return (
-    <div className="w-full h-full">
+    <div className="w-[85%] mx-auto">
       <div className="">
         <Hero_Banner />
 

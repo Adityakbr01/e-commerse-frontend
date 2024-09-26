@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import { FaCartShopping } from "react-icons/fa6";
 import { TOP_Brand_Products } from "../data/TOP_Brand_Products";
 import axios from "axios";
-import { toast } from "react-toastify";
+// import { toast } from "react-toastify";
+import toast from "react-hot-toast";
 import "react-toastify/dist/ReactToastify.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 // import "swiper/swiper-bundle.min.css";
@@ -22,6 +23,7 @@ import {
   removeItem,
   clearCart,
 } from "../Store/features/Cart/Cart_Store";
+import { ToastBar } from "react-hot-toast";
 
 function ProductCard({ scroll, noScroll }) {
   const [selectedColors, setSelectedColors] = useState({});
@@ -35,7 +37,7 @@ function ProductCard({ scroll, noScroll }) {
   };
 
   const [products, setProducts] = useState([]);
-  console.log(scroll);
+  // console.log(scroll);
 
   useEffect(() => {
     axios
@@ -62,12 +64,14 @@ function ProductCard({ scroll, noScroll }) {
   }, []);
 
   const handleAddToCart = (product) => {
-    toast.success(`${product.title.substring(0, 10)} added to cart!`);
+    toast.success(`${product.title.substring(0, 10)} added to cart!`, {
+      position: "top-center",
+    });
 
     dispatch(addItem(product));
   };
 
-  console.log(products);
+  // console.log(products);
 
   const count = useSelector((c) => c.counter.value);
   // const dispatch = useDispatch();
